@@ -3,6 +3,7 @@ const { PeerServer } = require('peer');
 require('dotenv').config();
 const express=require("express")
 const app=express()
+const cors=require('cors')
 
 // Use environment variable for port or default to 8080
 const PORT = process.env.PORT || 8080;

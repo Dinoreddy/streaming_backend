@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 8080;
 const PEER_PORT = process.env.PEER_PORT || 9000;
 
 app.use(cors({
-    origin: 'http://localhost:3000', // Replace with your frontend domain
+    origin: 'https://streaming-frontend-h0ky.onrender.com', // Replace with your frontend domain
     methods: ['GET', 'POST'],
     allowedHeaders: ['Content-Type']
   }));

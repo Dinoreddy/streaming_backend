@@ -68,11 +68,14 @@ console.log(`Signaling server running on ws://localhost:${PORT}`);
 // Create PeerJS server
 const peerServer = PeerServer({
   port: PEER_PORT,
-  path: '/',
+  path: '/peerjs', // Ensure this path matches the frontend
+  allow_discovery: true,  // Peer discovery option
+  proxied: true,  // Handle reverse proxy if using NGINX
   cors: {
     origin: 'https://streaming-frontend-h0ky.onrender.com',
     methods: ['GET', 'POST'],
-    allowedHeaders: ['Content-Type']
+    allowedHeaders: ['Content-Type'],
+    credentials: true
   }
 });
 
